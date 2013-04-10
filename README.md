@@ -1,4 +1,4 @@
-Moodle_Wikiversity_plugin
+Moodle Wikiversity plugin
 =========================
 
-Moodle Wikiversity plugin
+Allows to include Wikiversity pages into Moodle.
