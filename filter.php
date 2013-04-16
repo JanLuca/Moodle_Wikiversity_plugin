@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * class for include pages from Wikiversity
+ * Class for including pages from Wikiversity
  *
  * @author Jan Luca Naumann <jan@jans-seite.de>
  * @license CC-BY-SA 3.0 or later
