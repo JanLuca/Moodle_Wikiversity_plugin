@@ -17,8 +17,11 @@
 /**
  * Class for including pages from Wikiversity
  *
- * @author Jan Luca Naumann <jan@jans-seite.de>
- * @license CC-BY-SA 3.0 or later
+ * @package    filter
+ * @subpackage wikiversity
+ * @copyright  2013 by Jan Luca Naumann
+ * @author     Jan Luca Naumann <jan@jans-seite.de>
+ * @license    CC-BY-SA 3.0 or later
  */
 
 class filter_wikiversity extends moodle_text_filter {
