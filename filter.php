@@ -30,7 +30,6 @@ class filter_wikiversity extends moodle_text_filter {
 		$already_replaced = array();
 
 		$styles = '<link rel="stylesheet" href="https://bits.wikimedia.org/de.wikiversity.org/load.php?debug=false&amp;lang=de&amp;modules=ext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />';
-		//$styles .= '<link rel="stylesheet" href="//bits.wikimedia.org/de.wikiversity.org/load.php?debug=false&amp;lang=de&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />';
 		$styles .= '<style type="text/css">.center{width: auto; text-align: left;} body {font-family: Arial,Verdana,Helvetica,sans-serif; font-size:13px;}</style>';
 		
 		if ( preg_match_all( $regex, $text, $matches, PREG_SET_ORDER ) ) {
@@ -44,7 +43,7 @@ class filter_wikiversity extends moodle_text_filter {
 
 				$url = 'https://' . $wv_lang . '.wikiversity.org/w/api.php?action=parse&format=php&prop=text&page=' . $title;
 
-				$curl = new curl( array( 'cache' => true, 'module_cache' => 'wikiversity_filter' ) );
+				$curl = new curl( array( 'cache' => true, 'module_cache' => 'filter_wikiversity' ) );
 
 				$page = $curl->get( $url );
 				$page = unserialize( $page );
@@ -63,9 +62,7 @@ class filter_wikiversity extends moodle_text_filter {
 				$page = str_replace( 'href="/wiki', 'href="https://' . $wv_lang . '.wikiversity.org/wiki', $page );
 				$page = str_replace( 'href="/w/', 'href="https://' . $wv_lang . '.wikiversity.org/w/', $page );
 
-				if ( $PAGE->user_is_editing() ) {
-					$page = str_replace( 'class="editsection"', 'style="float: right;"', $page );
-				} else {
+				if ( !$PAGE->user_is_editing() ) {
 					$regex_edit = '@\<span class=\"editsection\"\>\[.*?\]\<\/span\>@i';
 					$page = preg_replace( $regex_edit, '', $page );
 				}
