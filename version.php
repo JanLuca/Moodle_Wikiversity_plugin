@@ -26,6 +26,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version  = 2013041600;
+$plugin->version  = 2013041700;
 $plugin->component= 'filter_wikiversity';
 $plugin->release = '1.0 (Build: 2013041600)'; 

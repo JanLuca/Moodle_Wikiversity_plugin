@@ -1,6 +1,4 @@
-<?php // $Id$
-// Language string for filter/helloworld.
-
+<?php
 $string['filtername'] = 'Wikiversity-Filter';
 $string['isfrom'] = 'Der vorangehende Text wurde aus der Wikiversity importiert. The Orginalseite kann man unter {$a} finden. ';
 $string['license'] = 'Der Text wurde unter der <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.de">Creative Commons "Namensnennung / Weitergabe unter gleichen Bedingungen 3.0"-Lizenz</a> und der <a href="https://de.wikipedia.org/wiki/Wikipedia:GNU_Free_Documentation_License">GFDL</a> ver&ouml;ffentlicht. ' . 
